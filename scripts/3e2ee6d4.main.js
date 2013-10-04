@@ -1,0 +1,1 @@
+$("ul.navbar-nav li").on("click",function(a){var b=$(a.currentTarget),c=$(b.find("a").attr("href"));$("ul.navbar-nav li").removeClass("active"),$("#accordion").removeClass("hidden"),b.addClass("active"),c.closest("div").next().height("auto"),c.closest("div").next().addClass("in")});
