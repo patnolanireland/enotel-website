@@ -92,7 +92,7 @@ body {
 }
 
 @media screen and (min-width: 320px) {
-  .feature .row .col-lg-4 {
+  .feature .col-lg-4 {
     padding-top: 15px;
   }
 }
@@ -161,6 +161,8 @@ ul.packed {
   color: #544F70;
 }
 
-.no-js .collapse {
-  display: block;
+.no-js .collapse,
+.no-js .hidden {
+  display: block !important;
+  visibility:  visible !important;
 }

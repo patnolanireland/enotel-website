@@ -1,12 +1,9 @@
-console.log('\'Allo \'Allo!');
 $('ul.navbar-nav li').on('click', function(e) {
     var el = $(e.currentTarget),
-        isOpen = el.hasClass('active'),
-        target = el.data().target || el.find('a').data().target,
-        heading = $(target).prev();
+        a = $(el.find('a').attr('href'));
     $('ul.navbar-nav li').removeClass('active');
-    isOpen === true ? el.removeClass('active') : el.addClass('active');
-    console.log(target, heading);
-    //heading.animate({scrollTop: heading.offset().top});
-    //window.scrollTo(0, $(target).prev().offset().top);
+    $('#accordion').removeClass('hidden');
+    el.addClass('active')
+    a.closest('div').next().height('auto');
+    a.closest('div').next().addClass('in');
 });
